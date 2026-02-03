@@ -25,9 +25,9 @@ def main():
         messagebox.showinfo("Setup", "Cancelled.")
         return
 
-    # 2) Find current file location, go back one directory, create new folder
+    # 2) Find current file location, go up TWO directories, create new folder
     current_dir = Path(__file__).resolve().parent
-    parent_dir = current_dir.parent
+    parent_dir = current_dir.parent.parent   # <-- goes up two levels
 
     # Folder name is fixed
     folder_name = "project_Folder"
