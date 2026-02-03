@@ -35,8 +35,8 @@ def main():
     new_folder.mkdir(parents=True, exist_ok=True)
 
     # 3) Repo URL placeholders (user will manually replace these)
-    repo1 = "https://github.com/your-org/repo1.git"
-    repo2 = "https://github.com/your-org/repo2.git"
+    repo1 = "https://github.com/LuisERivas/projectfrontend.git"
+    repo2 = "https://github.com/LuisERivas/projectbackend.git"
 
     # 4) Clone repos
     try:
