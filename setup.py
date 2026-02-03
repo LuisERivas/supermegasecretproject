@@ -37,11 +37,13 @@ def main():
     # 3) Repo URL placeholders (user will manually replace these)
     repo1 = "https://github.com/LuisERivas/projectfrontend.git"
     repo2 = "https://github.com/LuisERivas/projectbackend.git"
+    repo3 = "https://github.com/LuisERivas/projectController.git"  # <-- New Controller repo
 
     # 4) Clone repos
     try:
         run_git_clone(repo1, new_folder)
         run_git_clone(repo2, new_folder)
+        run_git_clone(repo3, new_folder)  # <-- Clone Controller repo
     except subprocess.CalledProcessError:
         messagebox.showerror(
             "Setup Error",
@@ -52,7 +54,7 @@ def main():
     # 5) Let user know repos have been cloned
     messagebox.showinfo(
         "Setup Complete",
-        f"Both repositories have been cloned into:\n\n{new_folder}"
+        f"All three repositories have been cloned into:\n\n{new_folder}"
     )
 
     # 6) Wait for user confirmation and exit
